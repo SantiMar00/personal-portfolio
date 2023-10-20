@@ -39,6 +39,14 @@ body {
     padding-bottom: 4px;
 }
 
+.icon-hover {
+    transition: 0.15s ease-in-out;
+}
+.icon-hover:hover {
+    fill: var(--color-accent);
+    transform: scale(1.2);
+}
+
 /* Medium */
 /*
 @media screen and (min-width: 641px) {
@@ -94,6 +102,7 @@ body {
         font-size: 68px;
         font-weight: var(--font-weight-thin);
         margin: 75px 0 0 0;
+        box-shadow: inset 0px -70px var(--color-primary);
     }
 
     .subtitle {
@@ -106,11 +115,12 @@ body {
         gap: 25px;
     }
 
-    div.about {
+    .section {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        margin-top: 50px;
     }
 
     .description {
@@ -119,18 +129,62 @@ body {
         padding: 0 20%;
     }
 
-    div.projects {
+    .skills-container {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin: 50px 0;
+        padding: 0 20%;
     }
 
-    div.skills {
+    .skill-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+        border: 1px solid var(--color-accent);
+        border-radius: 20%;
+        padding: 20px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-icon {
+        width: 60px;
+        transition: 0.4s;
+        transform: translateY(10px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-text {
+        transform: translateY(25px);
+        opacity: 0;
+        margin-top: 0;
+        padding: 0;
+        transition: 0.4s;
+    }
+
+    .skill-card:hover .skill-icon {
+        transform: translateY(-5px);
+    }
+
+    .skill-card:hover .card-text {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    .skill-card:hover .skill-icon-android {
+        transform: translateY(-5px);
+    }
+
+    .skill-icon-android {
+        transform: translateY(10px);
+        transition: 0.4s;
+        height: 70px;
+        width: 70px;
     }
 
     div.contact {
@@ -143,19 +197,20 @@ body {
     .footer {
         background-color: var(--color-accent);
         width: 100%;
+        margin-top: 100px;
+        padding: 15px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
 
     .footer-list,
     .socials {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         list-style: none;
         gap: 16px;
+        padding: 0;
+        margin: 5px;
     }
 
     .footer-list-item > a {

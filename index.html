@@ -13,6 +13,10 @@
             href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
             rel="stylesheet"
         />
+        <script
+            src="https://kit.fontawesome.com/c06bae6a56.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="styles.css" />
         <title>Santiago Mariño</title>
     </head>
@@ -20,7 +24,7 @@
         <div class="header">
             <h3 class="logo">SANTIAGO</h3>
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#home">Home</a></li>
+                <li class="nav-list-item"><a href="#">Home</a></li>
                 <li class="nav-list-item"><a href="#about">About</a></li>
                 <li class="nav-list-item"><a href="#projects">Projects</a></li>
                 <li class="nav-list-item"><a href="#skills">Skills</a></li>
@@ -29,15 +33,16 @@
         </div>
 
         <div class="body">
-            <div id="home" class="home">
+            <div class="home">
                 <h1 class="title">Santiago Mariño</h1>
                 <h3 class="subtitle">Software Developer</h3>
                 <div class="links">
                     <a
                         href="https://github.com/SantiMar00"
                         target="_blank"
-                        class="github"
+                        class="icon-hover"
                         ><svg
+                            class="github"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 500 500"
                             width="25"
@@ -52,6 +57,7 @@
                         target="_blank"
                         class="linkedin"
                         ><svg
+                            class="icon-hover"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 500 500"
                             width="25"
@@ -64,7 +70,7 @@
                 </div>
             </div>
 
-            <div id="about" class="about">
+            <div id="about" class="section">
                 <h2 class="section-title underline">About</h2>
                 <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -76,7 +82,7 @@
                 </p>
             </div>
 
-            <div id="projects" class="projects">
+            <div id="projects" class="section">
                 <h2 class="section-title underline">Projects</h2>
                 <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -88,19 +94,102 @@
                 </p>
             </div>
 
-            <div id="skills" class="skills">
+            <div id="skills" class="section">
                 <h2 class="section-title underline">Skills</h2>
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Earum consectetur repudiandae ratione mollitia voluptatum
-                    magnam sequi aut laboriosam, dolorum deleniti harum? Numquam
-                    veniam quo cumque quibusdam? Ea, harum. Error aliquid ab
-                    officia tempora! Cumque totam veniam quaerat assumenda,
-                    aperiam consectetur!
-                </p>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/react.svg"
+                            alt=""
+                        />
+                        <p class="card-text">React</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/javascript-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">JavaScript</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon-android"
+                            src="/images/android-4.svg"
+                            alt=""
+                        />
+                        <p class="card-text">Android</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/Kotlin_Icon.svg"
+                            alt=""
+                        />
+                        <p class="card-text">Kotlin</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/java-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">Java</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/html5-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">HTML</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/css3-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">CSS</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/react.svg"
+                            alt=""
+                        />
+                        <p class="card-text">Native</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/python-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/mysql-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">MySQL</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            class="skill-icon"
+                            src="/images/mongodb-plain.svg"
+                            alt=""
+                        />
+                        <p class="card-text">MongoDB</p>
+                    </div>
+                </div>
             </div>
 
-            <div id="contact" class="contact">
+            <div id="contact" class="section">
                 <h2 class="section-title underline">Contact</h2>
                 <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -144,13 +233,19 @@
                         /></svg
                 ></a>
             </div>
-            <div class="nav">
+            <div class="footer-nav">
                 <ul class="footer-list">
                     <li class="footer-list-item"><a href="#">Home</a></li>
-                    <li class="footer-list-item"><a href="#">About</a></li>
-                    <li class="footer-list-item"><a href="#">Projects</a></li>
-                    <li class="footer-list-item"><a href="#">Skills</a></li>
-                    <li class="footer-list-item"><a href="#">Contact</a></li>
+                    <li class="footer-list-item"><a href="#about">About</a></li>
+                    <li class="footer-list-item">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
