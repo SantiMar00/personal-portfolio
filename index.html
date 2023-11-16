@@ -24,6 +24,12 @@
         <div class="header">
             <h3 class="logo">SANTIAGO</h3>
             <ul class="nav-list">
+                <li>
+                    <a href="#" onclick="setLanguage('en')">en</a>
+                </li>
+                <li>
+                    <a href="#" onclick="setLanguage('es')">es</a>
+                </li>
                 <li class="nav-list-item"><a href="#">Home</a></li>
                 <li class="nav-list-item"><a href="#about">About</a></li>
                 <li class="nav-list-item"><a href="#projects">Projects</a></li>
@@ -251,3 +257,29 @@
         </div>
     </body>
 </html>
+
+<script>
+    var language
+    function getLanguage() {
+        localStorage.getItem('language') == null ? setLanguage('en') : false
+        $.ajax({
+            url: '/language/' + localStorage.getItem('language') + '.json',
+            dataType: 'json',
+            async: false,
+            dataType: 'json',
+            success: function (lang) {
+                language = lang
+            },
+        })
+    }
+
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang)
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#div1').text(language.date)
+    })
+</script>

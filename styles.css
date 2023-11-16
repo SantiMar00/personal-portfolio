@@ -101,7 +101,6 @@ body {
         font-family: var(--font-family-secondary);
         font-size: 68px;
         font-weight: var(--font-weight-thin);
-        margin: 75px 0 0 0;
         box-shadow: inset 0px -70px var(--color-primary);
     }
 
