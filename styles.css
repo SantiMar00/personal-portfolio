@@ -157,6 +157,23 @@ body {
         padding: 0 20%;
     }
 
+    .about_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 150px;
+    }
+
+    .about_container > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    .about_container > p {
+        padding: 0 10%;
+    }
+
     .project-card {
         display: flex;
         flex-direction: column;
