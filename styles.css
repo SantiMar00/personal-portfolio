@@ -88,6 +88,30 @@ body {
         box-shadow: inset 100px 0 0 0 var(--color-primary);
     }
 
+    .lang-selector {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .lang-selector::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 16px;
+        width: 16px;
+        background-image: url('/images/earth.svg');
+    }
+
+    #lang-selector {
+        background-color: transparent;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+    }
+
     .body {
         padding: 2%;
     }
@@ -127,9 +151,27 @@ body {
     }
 
     .description {
-        text-align: center;
-        font-size: 14px;
+        text-align: left;
+        line-height: 2rem;
+        font-size: 18px;
         padding: 0 20%;
+    }
+
+    .about_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 150px;
+    }
+
+    .about_container > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    .about_container > p {
+        padding: 0 10%;
     }
 
     .project-card {
